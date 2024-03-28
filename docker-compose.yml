@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  cf-ddns-updater:
+    build: .
+    image: cf-ddns-updater:latest
+    environment:
+      - CLOUDFLARE_API_TOKEN=
+      - CLOUDFLARE_DNS_NAME=
+      - CLOUDFLARE_IP_VERSION="ipv4"
+      - CLOUDFLARE_IPV4_URL="https://api.ipify.org"
+      - CLOUDFLARE_IPV6_URL="https://api64.ipify.org"
+      - CLOUDFLARE_DNS_UPDATE_INTERVAL="600"
+      - CLOUDFLARE_DNS_TTL="120"
+      - CLOUDFLARE_AUTO_CREATE_DNS="false"
