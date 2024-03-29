@@ -34,7 +34,7 @@ This repository contains a Docker image for a Cloudflare Dynamic DNS (DDNS) upda
     10. Click on the "Continue to summary" button to review your token's configuration.
     11. If everything looks correct, click on the "Create Token" button to generate the API token.
     12. On the next page, you will see your newly created API token. Make sure to copy the token value and store it securely, as you won't be able to view it again once you navigate away from this page.
-    13. Update your `.env` file with the generated API token, replacing the placeholder value for `CLOUDFLARE_API_TOKEN`.
+    13. Update your `stack.env` or `docker-compose.yml` file with the generated API token, replacing the placeholder value for `CLOUDFLARE_API_TOKEN`.
     - Remember to keep your API token confidential and avoid sharing it with others. If you suspect that your token has been compromised, you can revoke it from the Cloudflare dashboard and create a new one.
     - By following these steps, you can create an API token with the necessary permissions to update DNS records for your desired domain(s) in Cloudflare.
 
