@@ -26,7 +26,8 @@ jobs:
       - name: Build
         run: |
           GOOS=${{ matrix.os }} GOARCH=${{ matrix.arch }} go build -o ${{ github.repository }}-${{ matrix.os }}-${{ matrix.arch }}-${{ github.ref }}
-          cp stack.env.example ${{ github.repository }}-${{ matrix.os }}-${{ matrix.arch }}-${{ github.ref }}/.env.example
+          mkdir -p ${{ github.repository }}-${{ matrix.os }}-${{ matrix.arch }}-${{ github.ref }}
+          cp stack.env.example ${{ github.repository }}-${{ matrix.os }}-${{ matrix.arch }}-${{ github.ref }}/.env
           cp README.md ${{ github.repository }}-${{ matrix.os }}-${{ matrix.arch }}-${{ github.ref }}/
           ls
 
